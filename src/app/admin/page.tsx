@@ -187,7 +187,7 @@ export default function AdminDashboard() {
   }
 
   // Helper to get auth token
-  const getAuthHeaders = async () => {
+  const getAuthHeaders = async (): Promise<Record<string, string>> => {
     if (!user) return {};
     const token = await user.getIdToken();
     return {
@@ -226,7 +226,7 @@ export default function AdminDashboard() {
     
     try {
       const token = await user?.getIdToken();
-      const headers = token ? { 'Authorization': `Bearer ${token}` } : {};
+      const headers: Record<string, string> = token ? { 'Authorization': `Bearer ${token}` } : {};
 
       const res = await fetch('/api/upload', { 
         method: 'POST', 
