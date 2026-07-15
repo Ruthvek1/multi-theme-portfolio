@@ -1,9 +1,6 @@
-import { initializeApp, getApps, cert } from 'firebase-admin/app';
-import { getFirestore } from 'firebase-admin/firestore';
-import { getStorage } from 'firebase-admin/storage';
-import { getAuth } from 'firebase-admin/auth';
+import admin from 'firebase-admin';
 
-if (!getApps().length) {
+if (!admin.apps.length) {
   try {
     // Vercel sometimes adds quotes around the private key or alters the newlines.
     // This aggressively cleans the private key to ensure it is always valid.
@@ -20,8 +17,8 @@ if (!getApps().length) {
     // Replace literal '\n' string characters with actual newlines
     privateKey = privateKey.replace(/\\n/g, '\n');
 
-    initializeApp({
-      credential: cert({
+    admin.initializeApp({
+      credential: admin.credential.cert({
         projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
         clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
         privateKey,
@@ -33,6 +30,6 @@ if (!getApps().length) {
   }
 }
 
-export const adminDb = getFirestore();
-export const adminStorage = getStorage().bucket();
-export const adminAuth = getAuth();
+export const adminDb = admin.firestore();
+export const adminStorage = admin.storage().bucket();
+export const adminAuth = admin.auth();
