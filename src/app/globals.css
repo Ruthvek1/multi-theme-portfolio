@@ -10,6 +10,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-fraunces: var(--font-fraunces);
+  --font-space-mono: var(--font-space-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +25,34 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes warp {
+  0% {
+    transform: translateY(-100vh) scaleY(5);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) scaleY(5);
+    opacity: 0;
+  }
+}
+
+.animate-warp {
+  animation-name: warp;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Global Keyboard Accessibility: Focus Rings */
+*:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.7), 0 0 0 4px rgba(0, 0, 0, 1);
+  border-radius: 4px;
 }

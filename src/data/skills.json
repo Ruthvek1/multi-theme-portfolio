@@ -1,0 +1,26 @@
+[
+  {
+    "category": "Languages",
+    "items": ["Python", "TypeScript", "JavaScript (ES6+)", "Dart", "C", "SQL", "HTML5/CSS3"]
+  },
+  {
+    "category": "AI/ML & LLM Engineering",
+    "items": ["LangGraph", "LangChain", "LiteLLM", "RAG (Hybrid Search, RRF)", "Multi-Agent Orchestration", "AutoML (PyCaret)", "NLP/Intent Recognition", "Prompt Engineering"]
+  },
+  {
+    "category": "Backend",
+    "items": ["FastAPI", "REST APIs", "Server-Sent Events", "Celery", "SQLAlchemy"]
+  },
+  {
+    "category": "Frontend & Creative Engineering",
+    "items": ["React", "Next.js", "Three.js/React Three Fiber", "Framer Motion", "GSAP", "Tailwind CSS", "Streamlit", "RSC/SSG", "Web Performance & SEO"]
+  },
+  {
+    "category": "Data & Infrastructure",
+    "items": ["PostgreSQL", "pgvector", "Redis", "Docker", "Kubernetes", "OpenTelemetry", "Prometheus", "Grafana"]
+  },
+  {
+    "category": "Cloud & Tools",
+    "items": ["AWS", "Firebase", "Vercel", "Render", "Supabase", "Git", "GitHub Actions", "LaTeX", "Power BI"]
+  }
+]

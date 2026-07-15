@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Development scripts & files (should not be deployed)
+*.py
+*.pdf
+/venv/
+/cc/
+
+# Uploaded files (user-generated content)
+/public/uploads/
+
+# Firebase Service Account Keys
+*-firebase-adminsdk-*.json
+firebase-key.json

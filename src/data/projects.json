@@ -1,0 +1,65 @@
+[
+  {
+    "id": "project-1",
+    "title": "AEGIS",
+    "subtitle": "AI-Enhanced Guardian & Intelligence System",
+    "description": "A groundbreaking, production-ready Multi-Agent coding framework designed to solve reliability and safety challenges in autonomous software engineering. Built on LangGraph, it features a Graph-based State Machine coupled with Strict Docker Sandboxing. It enforces a Red-Green-Refactor loop, forcing agents to prove a bug exists before writing a fix, drastically reducing hallucinations. The architecture includes dynamic API load balancing, a CassetteChatModel for deterministic testing, real-time cost governance via OpenTelemetry, and persistent semantic memory powered by PostgreSQL and pgvector.",
+    "thumbnailUrl": "/assets/aegis_concept.png",
+    "technologies": ["Python", "FastAPI", "LangGraph", "React", "Docker", "PostgreSQL", "pgvector"],
+    "githubUrl": "https://github.com/Ruthvek1/aegis",
+    "liveUrl": "https://aegis-inky-pi.vercel.app/",
+    "year": "2026",
+    "featured": true,
+    "themeSpecific": {
+      "netflix": {
+        "matchPercentage": "99% Match",
+        "ageRating": "TV-MA",
+        "duration": "1 Season",
+        "genres": ["AI", "Agents", "Software Engineering"],
+        "director": "Ruthvek Kannan"
+      }
+    }
+  },
+  {
+    "id": "project-2",
+    "title": "Athenis AI",
+    "subtitle": "Enterprise Hybrid-RAG Platform",
+    "description": "A highly scalable, enterprise-grade Retrieval-Augmented Generation (RAG) platform. It solves critical challenges in secure document processing, robust access control, multi-tenant cost tracking, and AI provider lock-in. By combining pgvector cosine similarity with PostgreSQL full-text search (BM25) via Reciprocal Rank Fusion, it achieves world-class retrieval precision. The system abstracts the LLM via litellm, allowing seamless switching between Gemini, OpenAI, Anthropic, or Ollama. Features include background document ingestion with Celery, JWT-based RBAC, and OpenTelemetry instrumentation.",
+    "thumbnailUrl": "/assets/athenis_concept.png",
+    "technologies": ["Python", "FastAPI", "Next.js", "Celery", "PostgreSQL", "Redis", "Kubernetes"],
+    "githubUrl": "https://github.com/Ruthvek1/Athenis-ai",
+    "liveUrl": "https://athenis-ai-eight.vercel.app/",
+    "year": "2026",
+    "featured": true,
+    "themeSpecific": {
+      "netflix": {
+        "matchPercentage": "96% Match",
+        "ageRating": "TV-14",
+        "duration": "2h 30m",
+        "genres": ["Enterprise", "RAG", "Cloud-Native"],
+        "director": "Ruthvek Kannan"
+      }
+    }
+  },
+  {
+    "id": "project-3",
+    "title": "Project Watchdog",
+    "subtitle": "Proactive Conversational AI Assistant",
+    "description": "An event-driven conversational AI assistant designed to automate early-stage data science workflows. Moving beyond traditional reactive command-response models, it features an autonomous 'Project Watchdog' service that continuously monitors the file system for new datasets. Upon detection, it proactively interrupts and triggers an analysis pipeline using LLM-based intent recognition and STT/TTS via Whisper. It fully automates Exploratory Data Analysis (EDA) by generating and executing pandas/matplotlib code locally, compiling findings into a multi-page PDF report. Proven in a user study to reduce time-to-insight by ~90%.",
+    "thumbnailUrl": "/assets/watchdog_concept.png",
+    "technologies": ["Python", "Gemini API", "Whisper", "PyCaret", "Streamlit", "pandas"],
+    "githubUrl": "",
+    "liveUrl": "",
+    "year": "2025",
+    "featured": false,
+    "themeSpecific": {
+      "netflix": {
+        "matchPercentage": "94% Match",
+        "ageRating": "TV-PG",
+        "duration": "1h 15m",
+        "genres": ["Data Science", "Conversational AI", "Automation"],
+        "director": "Ruthvek Kannan"
+      }
+    }
+  }
+]

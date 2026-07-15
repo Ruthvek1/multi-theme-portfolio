@@ -1,0 +1,20 @@
+[
+  {
+    "id": "exp-1",
+    "company": "Apoliums Infotech India Pvt. Ltd.",
+    "role": "Software Development Intern",
+    "startDate": "Dec 2025",
+    "endDate": "Jun 2026",
+    "description": "Developed and shipped full-stack web and mobile applications across multiple client domains using JavaScript/TypeScript and mobile frameworks. Integrated LLM and AI capabilities into production business applications, connecting REST APIs to third-party AI providers. Collaborated with cross-functional engineering teams to design responsive UIs, integrate cloud services, and deploy scalable backend solutions.",
+    "logoUrl": "/assets/logos/apoliums_logo_v3.png"
+  },
+  {
+    "id": "exp-2",
+    "company": "Cancer Awareness & Rehabilitation Foundation (CARF)",
+    "role": "Web Developer (Volunteer)",
+    "startDate": "Jul 2024",
+    "endDate": "Jan 2025",
+    "description": "Contributed as a Web Developer at the Cancer Awareness & Rehabilitation Foundation (CARF), supporting the development and maintenance of the organization’s official website. Designed and improved responsive web pages, enhanced the user experience, implemented UI improvements, and helped ensure the website effectively communicated the organization’s mission, awareness campaigns, rehabilitation initiatives, and community resources. Collaborated with team members to maintain website content and improve accessibility, usability, and overall user engagement.",
+    "logoUrl": "/assets/logos/carf_logo_v2.png"
+  }
+]

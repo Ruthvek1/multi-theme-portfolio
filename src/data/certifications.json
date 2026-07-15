@@ -1,0 +1,130 @@
+[
+  {
+    "id": "cert-1",
+    "name": "Red Hat System Administration I (RH124)",
+    "issuer": "Red Hat Academy",
+    "date": "Jan 2024",
+    "url": "",
+    "fileUrl": "/assets/certificates/22070521031_ Ruthvek .pdf"
+  },
+  {
+    "id": "cert-2",
+    "name": "Green Skills and Artificial Intelligence",
+    "issuer": "AICTE & Edunet Foundation",
+    "date": "Jun 2025",
+    "url": "",
+    "fileUrl": "/assets/certificates/22070521031_Ruthvek Kannan.pdf"
+  },
+  {
+    "id": "cert-3",
+    "name": "AWS Academy Cloud Foundations",
+    "issuer": "AWS Academy",
+    "date": "Dec 2024",
+    "url": "https://www.credly.com/go/dpVjH9Vy",
+    "fileUrl": "/assets/certificates/AWS Academy Cloud Foundations.pdf"
+  },
+  {
+    "id": "cert-4",
+    "name": "AWS Academy Cloud Security Foundations",
+    "issuer": "AWS Academy",
+    "date": "Dec 2024",
+    "url": "https://www.credly.com/go/C2WfWndv",
+    "fileUrl": "/assets/certificates/AWS Academy Cloud Security.pdf"
+  },
+  {
+    "id": "cert-5",
+    "name": "Big Data - 201",
+    "issuer": "Infosys Springboard",
+    "date": "Jan 2025",
+    "url": "https://verify.onwingspan.com",
+    "fileUrl": "/assets/certificates/Big Data infosys.pdf"
+  },
+  {
+    "id": "cert-6",
+    "name": "The Rise of Smart Threats in the Age of AI",
+    "issuer": "Secure Cypher Solutions",
+    "date": "Jul 2025",
+    "url": "",
+    "fileUrl": "/assets/certificates/Certificate for Appreciation.pdf"
+  },
+  {
+    "id": "cert-7",
+    "name": "Database Foundations",
+    "issuer": "Oracle Academy",
+    "date": "Aug 2024",
+    "url": "",
+    "fileUrl": "/assets/certificates/DBMS_31Certificate.pdf"
+  },
+  {
+    "id": "cert-8",
+    "name": "Introduction to Data Mining",
+    "issuer": "Simplilearn",
+    "date": "Jan 2025",
+    "url": "",
+    "fileUrl": "/assets/certificates/Data Mining Certificate .pdf"
+  },
+  {
+    "id": "cert-9",
+    "name": "Ethical Considerations for Generative AI",
+    "issuer": "IBM SkillsBuild",
+    "date": "Aug 2025",
+    "url": "",
+    "fileUrl": "/assets/certificates/IBM genai.pdf"
+  },
+  {
+    "id": "cert-10",
+    "name": "Welcome to ServiceNow Micro-Certification",
+    "issuer": "ServiceNow",
+    "date": "Jan 2025",
+    "url": "",
+    "fileUrl": "/assets/certificates/Micro-Certification%20-%20Welcome%20to%20ServiceNow.pdf"
+  },
+  {
+    "id": "cert-11",
+    "name": "Introduction to Retrieval Augmented Generation",
+    "issuer": "IBM SkillsBuild",
+    "date": "Aug 2025",
+    "url": "",
+    "fileUrl": "/assets/certificates/Ruthvek Completion Certificate _ SkillsBuild.pdf"
+  },
+  {
+    "id": "cert-12",
+    "name": "Foundation Course on Green Skills and AI",
+    "issuer": "AICTE & Edunet Foundation",
+    "date": "Jan 2025",
+    "url": "",
+    "fileUrl": "/assets/certificates/Ruthvek Kannan_Completion.pdf"
+  },
+  {
+    "id": "cert-13",
+    "name": "Java Fundamentals",
+    "issuer": "Oracle Academy",
+    "date": "Apr 2024",
+    "url": "",
+    "fileUrl": "/assets/certificates/Ruthvek_22070521031_A.pdf"
+  },
+  {
+    "id": "cert-14",
+    "name": "Certified Application Developer",
+    "issuer": "ServiceNow",
+    "date": "Jul 2025",
+    "url": "",
+    "fileUrl": "/assets/certificates/ServiceNowCAD.pdf"
+  },
+  {
+    "id": "cert-15",
+    "name": "Certified System Administrator",
+    "issuer": "ServiceNow",
+    "date": "Jul 2025",
+    "url": "",
+    "fileUrl": "/assets/certificates/ServiceNowCSA.pdf"
+  },
+  {
+    "id": "cert-16",
+    "name": "Generative AI Foundations",
+    "issuer": "AWS Academy",
+    "date": "Oct 2025",
+    "url": "https://www.credly.com/badges/4ab10cc4-3f90-481f-a37e-0049e7274daa",
+    "fileUrl": "/assets/certificates/amazon genai.pdf"
+  }
+]

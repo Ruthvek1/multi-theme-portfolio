@@ -1,0 +1,26 @@
+[
+  {
+    "id": "edu-1",
+    "institution": "Symbiosis Institute of Technology, Nagpur",
+    "degree": "Bachelor of Technology in Computer Science & Engineering",
+    "startDate": "2022",
+    "endDate": "2026",
+    "description": "Symbiosis International Deemed University, Nagpur, India."
+  },
+  {
+    "id": "edu-2",
+    "institution": "Mount Litera Zee School, Nagpur",
+    "degree": "12th Grade (CBSE)",
+    "startDate": "2021",
+    "endDate": "2022",
+    "description": "Senior Secondary Education under the Central Board of Secondary Education (CBSE)."
+  },
+  {
+    "id": "edu-3",
+    "institution": "Narayana Vidyalayam, Nagpur",
+    "degree": "10th Grade (CBSE)",
+    "startDate": "2019",
+    "endDate": "2020",
+    "description": "Secondary Education under the Central Board of Secondary Education (CBSE)."
+  }
+]
