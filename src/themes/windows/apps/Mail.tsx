@@ -57,7 +57,7 @@ export default function MailApp() {
           <textarea
             className="w-full h-full outline-none resize-none text-sm leading-relaxed"
             placeholder="Write your message here..."
-            defaultValue={`Hi Recruiter,\n\nI just saw your Windows 11 portfolio and wanted to reach out. I'm very impressed with your work!\n\nBest,\n Ruthvek`}
+            defaultValue={`Hi ${personal?.name?.split(' ')[0]},\n\nI just saw your Windows 11 portfolio and wanted to reach out. I'm very impressed with your work!\n\nBest,\n Recruiter`}
           />
         </div>
 
