@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Window from '../components/Window';
 import { usePortfolio } from '@/core/PortfolioContext';
-import { Award, FolderGit2, HardDrive, Monitor, FolderOpen, ArrowLeft, ArrowRight, ArrowUp, Search, Download } from 'lucide-react';
+import { Award, FolderGit2, HardDrive, Monitor, FolderOpen, ArrowLeft, ArrowRight, ArrowUp, Search, Download, ExternalLink } from 'lucide-react';
 
 export default function CertificatesApp() {
   const { certifications } = usePortfolio();
@@ -106,8 +106,8 @@ export default function CertificatesApp() {
                         </a>
                       )}
                       {selectedCert.fileUrl && (
-                        <a aria-label="Link" href={selectedCert.fileUrl} download target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-1.5 bg-white/10 hover:bg-white/20 rounded text-xs font-semibold shadow-lg transition-colors border border-white/20">
-                          <Download className="w-3.5 h-3.5" /> Download Document
+                        <a aria-label="Link" href={selectedCert.url || selectedCert.fileUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-1.5 bg-white/10 hover:bg-white/20 rounded text-xs font-semibold shadow-lg transition-colors border border-white/20">
+                          <ExternalLink className="w-3.5 h-3.5" /> View Credential
                         </a>
                       )}
                     </div>
