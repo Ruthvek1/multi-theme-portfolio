@@ -93,7 +93,7 @@ export default function AdminDashboard() {
         
         {/* Step 1: Credentials */}
         {loginStep === 'credentials' && (
-          <form onSubmit={handleLogin} className="bg-white/5 p-8 border border-white/10 rounded-xl w-full max-w-md flex flex-col gap-4 shadow-2xl">
+          <form noValidate onSubmit={handleLogin} className="bg-white/5 p-8 border border-white/10 rounded-xl w-full max-w-md flex flex-col gap-4 shadow-2xl">
             <h1 className="text-2xl font-bold mb-4 text-center">Admin Login</h1>
             {loginError && <p className="text-red-500 text-sm font-bold text-center bg-red-500/10 py-2 rounded">{loginError}</p>}
             <div className="flex flex-col gap-2">
@@ -121,7 +121,7 @@ export default function AdminDashboard() {
             </button>
             <button 
               type="button" 
-              onClick={() => { setLoginStep('forgot'); setLoginError(''); }}
+              onClick={(e) => { e.preventDefault(); setLoginStep('forgot'); setLoginError(''); }}
               className="text-center text-blue-400 hover:text-blue-300 text-sm transition-colors"
             >
               Forgot Password?
@@ -134,7 +134,7 @@ export default function AdminDashboard() {
 
         {/* Forgot Password */}
         {loginStep === 'forgot' && (
-          <form onSubmit={handleForgotPassword} className="bg-white/5 p-8 border border-white/10 rounded-xl w-full max-w-md flex flex-col gap-4 shadow-2xl">
+          <form noValidate onSubmit={handleForgotPassword} className="bg-white/5 p-8 border border-white/10 rounded-xl w-full max-w-md flex flex-col gap-4 shadow-2xl">
             <h1 className="text-xl font-bold text-center">Forgot Password</h1>
             <p className="text-gray-400 text-sm text-center">Enter your email to receive a password reset link.</p>
             {loginError && <p className="text-red-500 text-sm font-bold text-center bg-red-500/10 py-2 rounded">{loginError}</p>}
