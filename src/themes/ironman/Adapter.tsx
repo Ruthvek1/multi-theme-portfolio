@@ -180,15 +180,15 @@ export default function IronmanAdapter() {
                >
                   <div className="absolute inset-0 bg-[#00f0ff]/10 blur-3xl rounded-full" />
                   
-                  <div className="w-[80%] h-full border border-[#00f0ff] bg-black/60 p-8 shadow-[0_0_50px_rgba(0,240,255,0.2)] flex flex-col justify-between">
-                     <div>
+                  <div className="w-[80%] h-full border border-[#00f0ff] bg-black/60 p-8 shadow-[0_0_50px_rgba(0,240,255,0.2)] flex flex-col gap-4">
+                     <div className="flex-1 overflow-y-auto pr-2">
                         <div className="text-[10px] text-[#ff0000] font-mono tracking-widest uppercase mb-2">PROTOTYPE SCHEMATICS</div>
                         <h2 className="text-3xl font-black text-white uppercase tracking-tighter mb-1">{activeProject.title}</h2>
                         <h3 className="text-sm text-[#ffaa00] uppercase font-bold tracking-widest">{activeProject.subtitle}</h3>
                         <p className="mt-4 text-xs font-mono text-[#00f0ff]/80 leading-relaxed text-justify">{activeProject.description}</p>
                      </div>
                      
-                     <div className="flex gap-4 mt-6">
+                     <div className="flex gap-4 shrink-0">
                         {activeProject.liveUrl && (
                           <a aria-label="Link" href={activeProject.liveUrl} target="_blank" rel="noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-[#00f0ff] text-black font-black uppercase tracking-widest text-xs hover:bg-white transition-colors">
                             <Play className="w-4 h-4 fill-current" /> PLAY DEMO
