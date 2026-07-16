@@ -166,7 +166,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(false);
-    }, 5000); 
+    }, 3000); 
     return () => clearTimeout(timer);
   }, []);
 
@@ -252,8 +252,7 @@ export default function Home() {
           >
             <div className="max-w-md text-center border border-white/10 bg-white/5 p-8 rounded-2xl shadow-2xl">
               <h2 className="text-xl font-light tracking-widest text-white mb-4 uppercase">Welcome</h2>
-              <p className="text-white/70 font-light mb-2">For the best experience, please use a desktop web browser.</p>
-              <p className="text-white/50 text-sm mt-4">I am actively improving this portfolio. If you don't like the website, please do share feedback!</p>
+              <p className="text-white/70 font-light">For the best experience, please use a desktop web browser.</p>
             </div>
           </motion.div>
         )}
