@@ -76,17 +76,18 @@ export async function POST(request: Request) {
     const fileRef = adminStorage.file(filename);
     await fileRef.save(buffer, {
       metadata: { contentType: file.type },
-      public: true, // Make the file publicly accessible
+      // Omit `public: true` as it crashes on buckets with Uniform Bucket-Level Access
     });
 
-    // Get public URL
-    const publicUrl = `https://storage.googleapis.com/${adminStorage.name}/${filename}`;
+    // Get Firebase Storage URL (uses Firebase Security Rules instead of GCS ACLs)
+    const encodedFilename = encodeURIComponent(filename);
+    const publicUrl = `https://firebasestorage.googleapis.com/v0/b/${adminStorage.name}/o/${encodedFilename}?alt=media`;
 
     return NextResponse.json({ success: true, url: publicUrl });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error uploading file to Firebase:', error);
     return NextResponse.json(
-      { success: false, error: 'File upload failed' },
+      { success: false, error: `File upload failed: ${error.message}` },
       { status: 500 }
     );
   }
