@@ -52,7 +52,7 @@ export default function SystemSettings() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col h-full bg-[#ECECEC] p-8 overflow-auto">
+      <div className="flex-1 bg-[#ECECEC] p-8 overflow-y-auto">
         <h1 className="text-2xl font-semibold text-gray-800 mb-8">{activeCategory}</h1>
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
