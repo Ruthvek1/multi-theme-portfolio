@@ -181,7 +181,7 @@ export default function IronmanAdapter() {
                   <div className="absolute inset-0 bg-[#00f0ff]/10 blur-3xl rounded-full" />
                   
                   <div className="w-[80%] h-full border border-[#00f0ff] bg-black/60 p-8 shadow-[0_0_50px_rgba(0,240,255,0.2)] flex flex-col gap-4">
-                     <div className="flex-1 overflow-y-auto pr-2">
+                     <div className="flex-1 min-h-0 overflow-y-auto pr-4" style={{ scrollbarWidth: 'thin', scrollbarColor: '#00f0ff transparent' }}>
                         <div className="text-[10px] text-[#ff0000] font-mono tracking-widest uppercase mb-2">PROTOTYPE SCHEMATICS</div>
                         <h2 className="text-3xl font-black text-white uppercase tracking-tighter mb-1">{activeProject.title}</h2>
                         <h3 className="text-sm text-[#ffaa00] uppercase font-bold tracking-widest">{activeProject.subtitle}</h3>
