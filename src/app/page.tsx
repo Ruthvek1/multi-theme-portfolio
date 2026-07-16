@@ -156,11 +156,19 @@ export default function Home() {
   const { personal, isLoading } = usePortfolio();
   const [hoveredTheme, setHoveredTheme] = useState<string | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [showPopup, setShowPopup] = useState(true);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const navRef = useRef<HTMLElement>(null);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
 
   const themeList = Object.values(themes);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(false);
+    }, 2500); // slightly longer than 2s to allow reading
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     let animationId: number;
@@ -233,6 +241,24 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden relative selection:bg-white/30 font-sans">
       
+      <AnimatePresence>
+        {showPopup && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-6"
+          >
+            <div className="max-w-md text-center border border-white/10 bg-white/5 p-8 rounded-2xl shadow-2xl">
+              <h2 className="text-xl font-light tracking-widest text-white mb-4 uppercase">Welcome</h2>
+              <p className="text-white/70 font-light mb-2">For the best experience, please use a desktop web browser.</p>
+              <p className="text-white/50 text-sm mt-4">I am actively improving this portfolio. If you don't like the website, please do share feedback!</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Atmosphere Background Engine */}
       <AtmosphereBackground activeTheme={hoveredTheme} />
       
