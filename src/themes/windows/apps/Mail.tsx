@@ -8,15 +8,15 @@ export default function MailApp() {
   const { personal, socials } = usePortfolio();
 
   return (
-    <Window 
-      id="mail" 
-      title="Mail - Contact" 
+    <Window
+      id="mail"
+      title="Mail - Contact"
       icon={<Mail className="w-full h-full text-blue-300" />}
       defaultWidth={800}
       defaultHeight={600}
     >
       <div className="w-full h-full flex flex-col bg-[#ffffff] text-black text-sm">
-        
+
         {/* Mail Toolbar */}
         <div className="flex border-b border-gray-200 bg-[#f5f5f5] p-2 gap-4 text-xs font-semibold text-gray-700">
           <div className="flex flex-col items-center gap-1 hover:bg-black/5 p-2 rounded cursor-pointer text-blue-600">
@@ -54,10 +54,10 @@ export default function MailApp() {
 
         {/* Message Body */}
         <div className="flex-1 p-6 flex flex-col">
-          <textarea 
-            className="w-full h-full outline-none resize-none text-sm leading-relaxed" 
+          <textarea
+            className="w-full h-full outline-none resize-none text-sm leading-relaxed"
             placeholder="Write your message here..."
-            defaultValue={`Hi ${personal?.name?.split(' ')[0]},\n\nI just saw your Windows 11 portfolio and wanted to reach out. I'm very impressed with your work!\n\nBest,\n[Your Name]`}
+            defaultValue={`Hi Recruiter,\n\nI just saw your Windows 11 portfolio and wanted to reach out. I'm very impressed with your work!\n\nBest,\n Ruthvek`}
           />
         </div>
 
