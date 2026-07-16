@@ -87,7 +87,7 @@ export default function TomesOfKnowledge({ skills, certifications }: { skills: a
 
                <div className="space-y-16">
                    {(showAllCerts ? certifications : certifications.slice(0, 3)).map((cert) => (
-                       <div key={cert.id} className="relative bg-[#fdf3d8] bg-[url('https://www.transparenttextures.com/patterns/old-mathematics.png')] p-8 shadow-[0_20px_40px_rgba(0,0,0,0.6)] before:absolute before:inset-2 before:border-2 before:border-[#8b4513]/30">
+                       <div key={cert.id} className="relative bg-[#fdf3d8] bg-[url('https://www.transparenttextures.com/patterns/old-mathematics.png')] p-8 shadow-[0_20px_40px_rgba(0,0,0,0.6)] before:absolute before:inset-2 before:border-2 before:border-[#8b4513]/30 before:pointer-events-none">
                            
                            {/* Wax seal */}
                            <div className="absolute -top-6 -right-6 w-20 h-20 bg-[#8b0000] rounded-full flex flex-col items-center justify-center shadow-[0_10px_20px_rgba(0,0,0,0.5),inset_0_4px_10px_rgba(255,255,255,0.2)] z-10">
@@ -100,16 +100,16 @@ export default function TomesOfKnowledge({ skills, certifications }: { skills: a
                                <div className="absolute -bottom-8 left-4 w-4 h-12 bg-[#5a0000] -z-10 shadow-lg transform -rotate-12"></div>
                            </div>
 
-                           <div className="text-center mb-6 pt-4">
+                           <div className="text-center mb-6 pt-4 relative z-10">
                                <h3 className="font-serif text-[#4a3018] text-2xl font-bold mb-2">
-                                   {cert.title}
+                                   {cert.name || cert.title}
                                </h3>
                                <p className="font-serif text-[#8b4513] text-lg italic">
                                    {cert.issuer} • {cert.date}
                                </p>
                            </div>
 
-                           <div className="flex justify-center gap-6 mt-8">
+                           <div className="flex justify-center gap-6 mt-8 relative z-10">
                                {(cert.url || cert.fileUrl) && (
                                    <a aria-label="Link" href={cert.url || cert.fileUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-2 border border-[#8b4513] text-[#8b4513] hover:bg-[#8b4513] hover:text-[#fdf3d8] transition-colors font-serif uppercase tracking-widest text-xs font-bold bg-[#fdf3d8]">
                                        <ExternalLink className="w-4 h-4" /> Inspect Decree
