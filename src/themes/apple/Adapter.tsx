@@ -297,7 +297,7 @@ function BioSection({ bio }: { bio: string }) {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.95, 1, 0.95]);
 
   return (
-    <section id="about" ref={targetRef} className="h-[200vh] relative w-full bg-transparent">
+    <section id="about" ref={targetRef} className="h-[120vh] relative w-full bg-transparent">
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
         <motion.p 
           style={{ opacity, scale }}
