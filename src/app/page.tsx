@@ -166,7 +166,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(false);
-    }, 2500); // slightly longer than 2s to allow reading
+    }, 3000); 
     return () => clearTimeout(timer);
   }, []);
 
