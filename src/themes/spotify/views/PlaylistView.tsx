@@ -129,14 +129,14 @@ export default function PlaylistView({ title, description, coverUrl, items, type
                  {item.description === 'GITHUB' && (
                    <span className="bg-[#333] text-white text-[10px] font-bold px-2 py-0.5 rounded-sm">GITHUB</span>
                  )}
-                 {item.link && (item.fileUrl || type === 'education') && (
-                   <a aria-label="Link" href={item.link} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} className="px-3 py-1 rounded-full border border-white/20 hover:bg-white/10 text-white transition-colors text-xs font-semibold whitespace-nowrap">
+                 {(item.fileUrl || item.link) && (type === 'certifications' || type === 'education' || type === 'experience') && (
+                   <a aria-label="Link" href={item.link || item.fileUrl} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} className="px-3 py-1 rounded-full border border-white/20 hover:bg-white/10 text-white transition-colors text-xs font-semibold whitespace-nowrap">
                      View Credential
                    </a>
                  )}
-                 {item.fileUrl && (
-                   <a aria-label="Link" href={item.fileUrl} download target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} className="p-2 rounded-full hover:bg-white/10 text-white transition-colors">
-                     <Download className="w-4 h-4" />
+                 {item.link && type === 'about' && (
+                   <a aria-label="Link" href={item.link} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} className="px-3 py-1 rounded-full border border-white/20 hover:bg-white/10 text-white transition-colors text-xs font-semibold whitespace-nowrap">
+                     View Resume
                    </a>
                  )}
                  {!item.fileUrl && item.description !== 'LIVE DEMO' && item.description !== 'GITHUB' && (
