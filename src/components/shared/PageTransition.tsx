@@ -23,7 +23,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
     initial: { top: '0%' },
     animate: { 
       top: '-50%',
-      transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] as const, delay: 2.0 } 
+      transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] as const, delay: 1.5 } 
     },
     exit: { 
       top: '0%',
@@ -35,7 +35,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
     initial: { bottom: '0%' },
     animate: { 
       bottom: '-50%',
-      transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] as const, delay: 2.0 } 
+      transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] as const, delay: 1.5 } 
     },
     exit: { 
       bottom: '0%',
@@ -73,7 +73,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
             initial={{ opacity: 1 }}
             animate={{ 
                 opacity: 0,
-                transition: { duration: 0.4, delay: 1.6, ease: "easeInOut" }
+                transition: { duration: 0.4, delay: 1.5, ease: "easeInOut" }
             }}
             exit={{ 
                 opacity: 1,
@@ -88,7 +88,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
                    className="h-full bg-white"
                    initial={{ width: "0%" }}
                    animate={{ width: "100%" }}
-                   transition={{ duration: 1.6, ease: "easeInOut" }}
+                   transition={{ duration: 1.5, ease: "easeInOut" }}
                  />
                </div>
              </div>
@@ -99,7 +99,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
         <motion.div
             initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.95 }}
             animate={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
-            transition={{ duration: 0.8, delay: 2.2, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
             className="w-full h-full"
         >
           {children}

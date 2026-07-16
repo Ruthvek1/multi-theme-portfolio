@@ -156,7 +156,7 @@ export default function Home() {
   const { personal, isLoading } = usePortfolio();
   const [hoveredTheme, setHoveredTheme] = useState<string | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const navRef = useRef<HTMLElement>(null);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
@@ -164,10 +164,12 @@ export default function Home() {
   const themeList = Object.values(themes);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPopup(false);
-    }, 3000); 
-    return () => clearTimeout(timer);
+    if (!sessionStorage.getItem('hasSeenWelcomePopup')) {
+      setShowPopup(true);
+      sessionStorage.setItem('hasSeenWelcomePopup', 'true');
+      const timer = setTimeout(() => setShowPopup(false), 3000); 
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   useEffect(() => {
