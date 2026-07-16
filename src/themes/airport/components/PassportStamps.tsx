@@ -27,15 +27,11 @@ export default function PassportStamps({ skills, certifications }: { skills: any
                       </div>
                    </div>
                    <div className="flex items-center gap-3">
-                      {cert.url ? (
-                         <a aria-label="Link" href={cert.url} target="_blank" rel="noreferrer" className="text-[10px] font-bold text-blue-600 hover:text-white hover:bg-blue-600 transition-colors uppercase tracking-widest border-2 border-blue-600 px-2 py-1 rounded">
-                            View File
+                      {(cert.url || cert.fileUrl) && (
+                         <a aria-label="Link" href={cert.url || cert.fileUrl} target="_blank" rel="noreferrer" className="text-[10px] font-bold text-blue-600 hover:text-white hover:bg-blue-600 transition-colors uppercase tracking-widest border-2 border-blue-600 px-2 py-1 rounded">
+                            View Credential
                          </a>
-                      ) : cert.fileUrl ? (
-                         <a aria-label="Link" href={cert.fileUrl} target="_blank" rel="noreferrer" className="text-[10px] font-bold text-blue-600 hover:text-white hover:bg-blue-600 transition-colors uppercase tracking-widest border-2 border-blue-600 px-2 py-1 rounded flex items-center gap-1">
-                            <Download className="w-3 h-3" /> Download
-                         </a>
-                      ) : null}
+                      )}
                       <div className="text-xs font-black text-green-600 uppercase tracking-widest border-2 border-green-600 px-2 py-1 rounded rotate-3">
                          CLEARED
                       </div>
