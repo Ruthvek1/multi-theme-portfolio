@@ -167,10 +167,12 @@ export default function AdminDashboard() {
         setStatus('Uploaded successfully!');
         setTimeout(() => setStatus(''), 2000);
       } else {
-        setStatus('Upload failed.');
+        setStatus(`Upload failed: ${json.error || 'Unknown error'}`);
+        setTimeout(() => setStatus(''), 5000);
       }
-    } catch (error) {
-      setStatus('Upload error.');
+    } catch (error: any) {
+      setStatus(`Upload error: ${error.message || 'Check console'}`);
+      setTimeout(() => setStatus(''), 5000);
     }
   };
 

@@ -10,6 +10,8 @@ const ALLOWED_MIME_TYPES = [
   'image/webp',
   'image/svg+xml',
   'application/pdf',
+  'application/msword',
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 ];
 
 // Max file size: 5MB
@@ -55,7 +57,7 @@ export async function POST(request: Request) {
 
     // ── File extension validation (double-check against MIME) ──
     const ext = path.extname(file.name).toLowerCase();
-    const validExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.pdf'];
+    const validExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.pdf', '.doc', '.docx'];
     if (!validExtensions.includes(ext)) {
       return NextResponse.json(
         { success: false, error: `File extension "${ext}" not allowed` },
