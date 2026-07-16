@@ -59,23 +59,6 @@ export default function AdminDashboard() {
     }
   };
 
-  // Forgot password
-  const handleForgotPassword = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoginError('');
-    setForgotMessage('');
-    setLoginLoading(true);
-    try {
-      await sendPasswordResetEmail(auth, email);
-      setForgotMessage('Password reset email sent! Check your inbox.');
-      setLoginStep('reset');
-    } catch (error: any) {
-      setLoginError(error.message || 'Failed to send reset email');
-    } finally {
-      setLoginLoading(false);
-    }
-  };
-
   const handleLogout = async () => {
     await signOut(auth);
     setFormData(null);
@@ -119,73 +102,14 @@ export default function AdminDashboard() {
             <button type="submit" disabled={loginLoading} className="w-full py-3 bg-white text-black hover:bg-gray-200 rounded font-bold transition shadow-lg disabled:opacity-50 mt-2">
               {loginLoading ? 'Logging in...' : 'Login'}
             </button>
-            <button 
-              type="button" 
-              onClick={(e) => { e.preventDefault(); setLoginStep('forgot'); setLoginError(''); }}
-              className="text-center text-blue-400 hover:text-blue-300 text-sm transition-colors"
-            >
-              Forgot Password?
-            </button>
-            <Link href="/" className="text-center text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="/" className="text-center text-gray-400 hover:text-white text-sm transition-colors mt-2">
               Back to Portfolio
             </Link>
           </form>
         )}
-
-        {/* Forgot Password */}
-        {loginStep === 'forgot' && (
-          <form noValidate onSubmit={handleForgotPassword} className="bg-white/5 p-8 border border-white/10 rounded-xl w-full max-w-md flex flex-col gap-4 shadow-2xl">
-            <h1 className="text-xl font-bold text-center">Forgot Password</h1>
-            <p className="text-gray-400 text-sm text-center">Enter your email to receive a password reset link.</p>
-            {loginError && <p className="text-red-500 text-sm font-bold text-center bg-red-500/10 py-2 rounded">{loginError}</p>}
-            <div className="flex flex-col gap-2">
-              <label className="text-xs text-gray-400 uppercase tracking-widest font-bold">Email</label>
-              <input 
-                type="email" 
-                value={email} 
-                onChange={e => setEmail(e.target.value)}
-                className="bg-black/50 border border-white/20 rounded p-3 text-white text-sm focus:border-white/50 outline-none transition-colors"
-                required 
-              />
-            </div>
-            <button type="submit" disabled={loginLoading} className="w-full py-3 bg-white text-black hover:bg-gray-200 rounded font-bold transition shadow-lg disabled:opacity-50 mt-2">
-              {loginLoading ? 'Sending...' : 'Send Reset Link'}
-            </button>
-            <button 
-              type="button" 
-              onClick={() => { setLoginStep('credentials'); setLoginError(''); }}
-              className="text-center text-gray-400 hover:text-white text-sm transition-colors"
-            >
-              ← Back to Login
-            </button>
-          </form>
-        )}
-
-        {/* Password Reset Success */}
-        {loginStep === 'reset' && (
-          <div className="bg-white/5 p-8 border border-white/10 rounded-xl w-full max-w-md flex flex-col gap-4 shadow-2xl text-center">
-            <div className="flex justify-center mb-2">
-              <div className="w-16 h-16 rounded-full bg-green-500/10 border border-green-500/30 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20 6 9 17l-5-5" />
-                </svg>
-              </div>
-            </div>
-            <h1 className="text-xl font-bold">Email Sent!</h1>
-            <p className="text-green-400 text-sm">{forgotMessage}</p>
-            <button 
-              onClick={() => { setLoginStep('credentials'); setLoginError(''); setForgotMessage(''); setPassword(''); }}
-              className="w-full py-3 bg-white text-black hover:bg-gray-200 rounded font-bold transition shadow-lg mt-4"
-            >
-              Go to Login
-            </button>
-          </div>
-        )}
-
       </div>
     );
   }
-
   // Helper to get auth token
   const getAuthHeaders = async (): Promise<Record<string, string>> => {
     if (!user) return {};
