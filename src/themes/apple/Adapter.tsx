@@ -113,7 +113,7 @@ export default function AppleAdapter() {
                  className="flex flex-col items-center text-center p-8 bg-black/40 backdrop-blur-md rounded-3xl shadow-2xl border border-white/5 hover:border-white/20 transition-colors"
                >
                  <div className="h-24 flex items-center justify-center mb-6 bg-white/5 rounded-2xl w-full p-4">
-                   {exp.logoUrl && <Image src={exp.logoUrl} alt={exp.company} className="max-h-full max-w-full object-contain brightness-0 invert opacity-80" width={800} height={600} />}
+                   {exp.logoUrl && <Image src={exp.logoUrl} alt={exp.company} className="max-h-full max-w-full object-contain rounded-xl" width={800} height={600} />}
                  </div>
                  <h3 className="text-[24px] font-semibold mb-2">{exp.role}</h3>
                  <div className="text-[14px] text-[#86868b] mb-4 font-medium">{exp.company} <br/> {exp.startDate} - {exp.endDate}</div>

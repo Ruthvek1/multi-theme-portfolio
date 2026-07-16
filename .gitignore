@@ -42,7 +42,7 @@ next-env.d.ts
 
 # Development scripts & files (should not be deployed)
 *.py
-*.pdf
+
 /venv/
 /cc/
 
