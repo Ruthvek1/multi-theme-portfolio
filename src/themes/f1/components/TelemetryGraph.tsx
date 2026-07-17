@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function TelemetryGraph({ skills }: { skills: any }) {
   if (!skills) return null;
@@ -16,14 +17,14 @@ export default function TelemetryGraph({ skills }: { skills: any }) {
                <div className="text-white text-xs font-bold uppercase tracking-wider mb-2">{index} {data.category}</div>
                <div className="space-y-3">
                  {data.items?.slice(0, 5).map((item: string, i: number) => {
-                    // Generate a fake but consistent performance percentage based on the string length
-                    const perfValue = Math.min(99, 70 + (item.length * 2)); 
-                    const isPurple = perfValue > 90; // "Purple Sector" = fastest overall
-                    const isGreen = perfValue > 80 && perfValue <= 90; // "Green Sector" = personal best
+                    // Base random value based on string length to seed the animation
+                    const baseVal = Math.min(90, 40 + (item.length * 3)); 
+                    const isPurple = baseVal > 80; 
+                    const isGreen = baseVal > 60 && baseVal <= 80; 
                     
-                    let colorClass = 'bg-yellow-500'; // Default
-                    if (isPurple) colorClass = 'bg-[#c100f5]'; // Purple
-                    if (isGreen) colorClass = 'bg-[#00ff41]'; // Green
+                    let colorClass = 'bg-yellow-500'; 
+                    if (isPurple) colorClass = 'bg-[#c100f5]'; 
+                    if (isGreen) colorClass = 'bg-[#00ff41]'; 
 
                     return (
                       <div key={item} className="flex flex-col gap-1">
@@ -34,7 +35,23 @@ export default function TelemetryGraph({ skills }: { skills: any }) {
                             </span>
                          </div>
                          <div className="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
-                            <div className={`h-full ${colorClass}`} style={{ width: `${perfValue}%` }} />
+                            <motion.div 
+                              className={`h-full ${colorClass}`} 
+                              animate={{ 
+                                width: [
+                                  `${baseVal}%`, 
+                                  `${Math.max(10, baseVal - 30)}%`, 
+                                  `${Math.min(100, baseVal + 20)}%`, 
+                                  `${Math.max(10, baseVal - 15)}%`, 
+                                  `${baseVal}%`
+                                ] 
+                              }}
+                              transition={{ 
+                                duration: 3 + (i * 0.7), 
+                                repeat: Infinity, 
+                                ease: "easeInOut" 
+                              }}
+                            />
                          </div>
                       </div>
                     );
