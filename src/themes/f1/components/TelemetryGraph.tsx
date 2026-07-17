@@ -30,7 +30,7 @@ export default function TelemetryGraph({ skills }: { skills: any }) {
                          <div className="flex justify-between text-[10px] font-bold">
                             <span className="text-gray-300 truncate w-3/4">{item}</span>
                             <span className={isPurple ? 'text-[#c100f5]' : isGreen ? 'text-[#00ff41]' : 'text-yellow-500'}>
-                              {perfValue}%
+                              {isPurple ? 'OPT' : isGreen ? 'NOM' : 'ACT'}
                             </span>
                          </div>
                          <div className="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
