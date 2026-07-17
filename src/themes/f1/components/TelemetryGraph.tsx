@@ -47,7 +47,7 @@ export default function TelemetryGraph({ skills }: { skills: any }) {
                                 ] 
                               }}
                               transition={{ 
-                                duration: 3 + (i * 0.7), 
+                                duration: 5 + (i * 1.5), 
                                 repeat: Infinity, 
                                 ease: "easeInOut" 
                               }}
