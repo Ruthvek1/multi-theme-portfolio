@@ -345,7 +345,11 @@ function ContentRow({ title, items }: { title: string, items: any[] }) {
       <div className="relative">
         <div ref={rowRef} className="flex gap-2 overflow-x-auto hide-scrollbar scroll-smooth snap-x z-20 pb-10 -mb-10 pt-4 -mt-4">
           {items.map((item, i) => (
-             <div key={i} className="flex-none w-[280px] aspect-video relative rounded-sm cursor-pointer snap-start hover:z-50 transform hover:scale-110 hover:-translate-y-4 transition-all duration-300 ease-out shadow-lg">
+             <div 
+               key={i} 
+               onClick={() => document.getElementById(`project-${item.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+               className="flex-none w-[280px] aspect-video relative rounded-sm cursor-pointer snap-start hover:z-50 transform hover:scale-110 hover:-translate-y-4 transition-all duration-300 ease-out shadow-lg"
+             >
                 <Image src={item.thumbnailUrl} alt={item.title || "Thumbnail"} className="w-full h-full object-cover rounded-sm" width={800} height={600} />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent opacity-80 rounded-sm" />
                 <div className="absolute bottom-3 left-4">
@@ -381,6 +385,7 @@ function ProjectScene({ project, index }: { project: any, index: number }) {
 
   return (
     <motion.div 
+      id={`project-${project.id}`}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
