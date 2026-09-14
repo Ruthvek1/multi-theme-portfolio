@@ -167,7 +167,7 @@ export default function Home() {
     if (!sessionStorage.getItem('hasSeenWelcomePopup')) {
       setShowPopup(true);
       sessionStorage.setItem('hasSeenWelcomePopup', 'true');
-      const timer = setTimeout(() => setShowPopup(false), 3000); 
+      const timer = setTimeout(() => setShowPopup(false), 700); 
       return () => clearTimeout(timer);
     }
   }, []);
